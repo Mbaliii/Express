@@ -7,7 +7,7 @@ function Employee() {
 	const [data, setData] = useState([])
 	const navigate = useNavigate();
 	useEffect(() => {
-		axios.get("mongodb+srv://mbali:MBALENHLEKHUMALO@cluster0.muawygv.mongodb.net/")
+		axios.get(" http://localhost:5000/List/")
 			.then(res => setData(res.data))
 			.catch(err => console.log(err));
 
@@ -17,7 +17,7 @@ function Employee() {
 	const handleDelete = (id) => {
 		const confirm = window.confirm("Would you wish to delete? ");
 		if (confirm) {
-			axios.delete('mongodb+srv://mbali:MBALENHLEKHUMALO@cluster0.muawygv.mongodb.net/' + id)
+			axios.delete('http://localhost:5000/List/' + id)
 				.then(res => {
 					navigate('/');
 				}).catch(err => console.log(err));
@@ -34,7 +34,7 @@ function Employee() {
 					<Link to="/Employee/create" className="btn btn-success">Add +</Link>
 				</div>
 				<div className="flex-shrink-0 h-10 w-10">
-					<img src="${profile}" class="h-10 w-10 rounded-full" alt=""></img>
+					<img src="{profile}" class="h-10 w-10 rounded-full" alt=""></img>
 				</div>
 				<table className="table table-striped ">
 					<thead>

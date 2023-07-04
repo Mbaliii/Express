@@ -9,7 +9,7 @@ function Read() {
     const [data, setData] = useState([])
     const { id } = useParams();
     useEffect(() => {
-        axios.get("mongodb+srv://mbali:MBALENHLEKHUMALO@cluster0.muawygv.mongodb.net" + id)
+        axios.get(" http://localhost:8000/Authenticate/" + id)
             .then(res => setData(res.data))
             .catch(err => console.log(err));
     }, [])

@@ -15,7 +15,7 @@ function Login() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('http://localhost:8000/login', { email, password })
+        axios.post('mongodb+srv://mbali:MBALENHLEKHUMALO@cluster0.muawygv.mongodb.net', { email, password })
             .then(result => {
                 console.log(result)
                 if (result.data) {

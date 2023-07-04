@@ -8,7 +8,7 @@ app.use(express.json())
 app.use(cors())
 
 // mongoose.connect("mongodb://localhost:127.0.0.1:27017/User_Input")
-mongoose.connect("mongodb://localhost:27017/employee")
+mongoose.connect("mongodb+srv://mbali:MBALENHLEKHUMALO@cluster0.muawygv.mongodb.net/")
 
 app.post("/login", (req, res) => {
     const { email, password } = req.body;
@@ -35,6 +35,6 @@ app.post('/register', (req, res) => {
 
 })
 
-app.listen(8000, () => {
-    console.log("Yahhhhh")
+app.listen(5000, () => {
+    console.log("we are working")
 })

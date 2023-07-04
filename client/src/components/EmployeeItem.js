@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import { AiFillEdit } from "react-icons/ai";
 import { IoCheckmarkDoneSharp, IoClose } from "react-icons/io5";
 
-const TodoItem = (props) => {
+const EmployeeItem = (props) => {
   const { item, updateEmployee, removeEmployee, completeEmployee } = props;
 
   const inputRef = useRef(true);

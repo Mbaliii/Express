@@ -19,7 +19,7 @@ function EmployeeCreate() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        axios.post('http://localhost:8000/List', values)
+        axios.post('mongodb+srv://mbali:MBALENHLEKHUMALO@cluster0.muawygv.mongodb.net', values)
             .then(res => {
                 console.log(res);
                 navigate('/Employee')

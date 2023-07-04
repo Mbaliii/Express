@@ -7,7 +7,7 @@ function Employee() {
 	const [data, setData] = useState([])
 	const navigate = useNavigate();
 	useEffect(() => {
-		axios.get(" http://localhost:8000/List/")
+		axios.get("mongodb+srv://mbali:MBALENHLEKHUMALO@cluster0.muawygv.mongodb.net/")
 			.then(res => setData(res.data))
 			.catch(err => console.log(err));
 
@@ -17,7 +17,7 @@ function Employee() {
 	const handleDelete = (id) => {
 		const confirm = window.confirm("Would you wish to delete? ");
 		if (confirm) {
-			axios.delete('http://localhost:8000/List/' + id)
+			axios.delete('mongodb+srv://mbali:MBALENHLEKHUMALO@cluster0.muawygv.mongodb.net/' + id)
 				.then(res => {
 					navigate('/');
 				}).catch(err => console.log(err));

@@ -14,7 +14,7 @@ function Register() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        axios.post('http://localhost:8000/register', { name, email, password })
+        axios.post('mongodb+srv://mbali:MBALENHLEKHUMALO@cluster0.muawygv.mongodb.net', { name, email, password })
             .then(result => {
                 console.log(result)
                 navigate('/login')

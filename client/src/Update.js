@@ -17,7 +17,7 @@ function Update() {
     })
     const navigate = useNavigate(); 
     useEffect(() => {
-        axios.get("mongodb+srv://mbali:MBALENHLEKHUMALO@cluster0.muawygv.mongodb.net/" + id)
+        axios.get("http://localhost:8000/Authenticate" + id)
             .then(res => {
                 setValues(res.data); 
             })
@@ -26,7 +26,7 @@ function Update() {
 
     const handleUpdate = (event) => {
         event.preventDefault();
-        axios.post('mongodb+srv://mbali:MBALENHLEKHUMALO@cluster0.muawygv.mongodb.net/' +id, values)
+        axios.post('http://localhost:8000/Authenticate' +id, values)
             .then(res => {
                 console.log(res);
                 navigate('/Employee')
